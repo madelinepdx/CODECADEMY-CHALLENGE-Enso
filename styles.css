@@ -1,0 +1,489 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: #08093c;
+  }
+
+header {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    padding-bottom: 5px;
+    background-color:#ffffff;
+    justify-content: space-between;
+  }
+
+.logo-container {
+    flex: 0 0 auto; /* Keep the logo container FIXED size */
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.logo img {
+    width: 7rem;
+    height: auto;
+    margin-right: 10px;
+}
+
+header .logo {
+    display: flex;
+    flex: 1;
+    align-items: left;
+    text-decoration: none;
+    color: #08093c;
+
+}
+
+header nav ul {
+    display: flex;
+}
+  
+/* Navigation Bar */
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar li {
+    margin-right: 20px;
+  }
+
+  .navbar li a {
+    text-decoration: none;
+    padding: 10px;
+    color: #08093c;
+    transition: color 0.3s;
+    border-radius: 60px;
+  
+  }
+
+  .navbar li a:hover {
+    background-color:#00bfff;
+    color: white;
+  }
+  
+  .language-menu {
+    position: relative;
+  }
+
+  .language-menu select {
+    font-family:'Nunito', sans-serif;
+    font-size: 16px;
+    background-color: #fff;
+    color:#08093c;
+    border: 0;
+    cursor: pointer;
+    transition: border-color 0.3s ease-in-out;
+
+  }
+
+  .language-menu select:hover,
+  .language-menu select:focus {
+    background-color: #00bfff;
+    border-radius: 30px;
+    padding: 5px;
+  }
+
+  /* Styling for the button */
+.nav-button {
+    font-family:'Nunito', sans-serif;
+    font-size: 16px;
+    background-color:#08093c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 60px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+.nav-button:hover {
+    background-color:#00bfff;
+}
+
+/* Media query for lang-menu and nav-button */
+@media screen and (max-width: 600px) {
+    .logo img {
+        width: 5rem;
+    }
+
+    .language-menu, .nav-button {
+        display: none;
+    }
+  }
+
+@media screen and (max-width: 500px) {
+    .navbar {
+        display: none;
+    }
+}
+
+/* Main Content - Title + Tagline */
+.title-container {
+    display: flex;
+    justify-content: center;
+    background-image: url('images/huy-nguyen-QGxBeUDkeWk-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+    color: #08093c;
+    position: relative;
+    z-index: 0;
+}
+
+.title {
+    font-size: 28px;
+    padding-top: 40px;
+}
+
+.tagline {
+    font-size: 30px;
+    margin-top: 10px; 
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    padding: 5px 10px;
+}
+
+/* Media query for mobile */
+@media screen and (max-width: 600px) {
+    .title-image {
+        padding: 60px 0;
+    }
+
+    .title {
+        font-size: 18px; 
+        padding-top: 20px;
+    }
+
+    .tagline {
+        font-size: 26px; 
+        margin-top: 5px; 
+}
+}
+
+/* Yellow Search Section */
+.dropdown-section {
+    background-color:rgb(249, 213, 48);
+    padding: 30px 50px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    width: 50%;
+    border-radius: 30px;
+    position: absolute;
+    margin: 20 auto;
+    bottom: -10%;
+    z-index: 1;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.city-button {
+    font-family:'Nunito', sans-serif;
+    font-size: 16px;
+    background-color: white;
+    color: #08093c;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+    border-radius: 10px;
+    width: 100%; /* Set width to 100% to match the button's width */
+}
+
+.dropdown-content a {
+    font-family:'Nunito', sans-serif;
+    font-size: 16px;
+    display: block; /* Display each city option in a separate line */
+    padding: 5px;
+    text-decoration: none;
+    color: #08093c;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+.explore-button {
+    font-family:'Nunito', sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 16.5px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+}
+
+/* Media query for mobile */
+@media screen and (max-width: 800px) {
+    .dropdown-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        gap: 0;
+    }
+    .city-button {
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+    .explore-button {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .dropdown-section {
+        margin-bottom: -20px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .dropdown-section {
+        margin-bottom: -60px;
+    }
+    .title .tagline {
+        margin-top: -50px;
+    }
+    .manifesto-content {
+        margin-top: 60px;
+    }
+}
+    /* Manifesto - Why Enso? */
+.manifesto {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+}
+
+.manifesto-content, .co-living-image {
+    flex: 1; /* Each takes up 50% of the width */
+    padding: 40px;
+    padding-top: 30px; /* lowered this section -added space between content above */
+}
+
+.co-living-image img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 30px;
+}
+
+.manifesto-content {
+    text-align: center;
+    text-size-adjust: center;
+}
+
+.secondary-h2 {
+    padding-top: 50px;
+}
+
+@media screen and (max-width: 950px) {
+    .secondary-h2, .secondary-p {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .manifesto {
+        flex-direction: column;
+    }
+}
+
+.locations {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(249, 213, 48);
+    border-radius: 30px;
+}
+
+.locations h1 {
+    margin-bottom: 2px;
+}
+
+.locations h2 {
+    margin-top: 2px;
+}
+
+.city-locations {
+    display: flex;
+    justify-content: center;
+    max-width: 100%; /* set a maximum width for the container */
+    border-radius: 30px;
+    gap: 20px;
+    position: relative;
+    padding-top: 20px; /* space between Where Is Enso? and images */
+    margin-bottom: 30px;
+}
+
+.barcelona-container, .madrid-container, .valencia-container, .malaga-container, a {
+    text-decoration: none;
+}
+
+.city-locations h2 {
+    margin-top: -80px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    z-index: 1;
+    position: absolute; /* to overlap images */
+    text-decoration: none;
+    font-size: 1.75rem;
+}
+
+.city-locations h2 a:hover {
+    color:#08093c;
+  }
+
+.city-locations img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 30px;
+    position: relative;
+    z-index: 0;
+    margin-bottom: 50px; /* slightly overlaps images */
+}
+
+@media screen and (max-width: 600px) {
+    .city-locations {
+        flex-direction: row; /* Display city containers side by side */
+        flex-wrap: wrap; /* Allow containers to wrap onto a new line */
+        justify-content: space-between; /* Distribute space evenly between containers */
+        gap: 10px;
+    }
+
+    .city-locations .barcelona-container,
+    .city-locations .madrid-container,
+    .city-locations .valencia-container,
+    .city-locations .malaga-container {
+        width: calc(50% - 10px); /* Adjust the width to 50% minus the gap */
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .city-locations .barcelona-container,
+    .city-locations .madrid-container,
+    .city-locations .valencia-container,
+    .city-locations .malaga-container {
+        width: 100%; /* For screens narrower than 300px, display one city container per line */
+    }
+
+    .city-locations h2 {
+        margin-top: -120px;
+    }
+}
+
+/* Founders styling */
+
+.founders {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    text-align: center;
+    gap: 15px;
+    }
+
+.founders h2 {
+    margin-top: -10px;
+    background-color:#08093c;
+    color:#ffffff;
+}
+
+.founders h3 {
+    margin-top: -20px;
+}
+
+.who {
+    background-color:rgb(249, 213, 48);
+    border-radius: 100%;
+    height: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    .founders {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        margin: 10px;
+    }
+    .who {
+        order: -1; /* Change the order to move .who to the top */
+        background-color:rgb(249, 213, 48);
+        border-radius: 100%;
+    }
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(249, 213, 48);
+}
+
+.footer-links ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-logo {
+    padding: 15px;
+}
+.footer-links li {
+    margin-right: 20px;
+}
+
+.footer-contact {
+    padding: 10px;
+    text-align: right;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links {
+        padding-left: 10px;
+    }
+    .footer-contact {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .footer-links,
+    .footer-logo {
+        display: none;
+    }
+}
+
