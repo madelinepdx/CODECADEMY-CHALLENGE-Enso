@@ -2,6 +2,7 @@ body {
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
     color: #08093c;
+    background-color:#ffffff;
   }
 
 header {
@@ -123,10 +124,27 @@ header nav ul {
   }
 
 @media screen and (max-width: 500px) {
-    .navbar {
+    .navbar li {
+        font-size: .75rem;
+        margin-right: 10px;
+    }
+    .logo img {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navbar li {
         display: none;
     }
 }
+
+@media screen and (max-width: 300px) {
+    .navbar li {
+        display: none;
+    }
+}
+
 
 /* Main Content - Title + Tagline */
 .title-container {
@@ -276,6 +294,7 @@ header nav ul {
     display: flex;
     align-items: center;
     padding: 30px;
+    margin-top: 40px;
 }
 
 .manifesto-content, .co-living-image {
@@ -295,6 +314,10 @@ header nav ul {
     text-size-adjust: center;
 }
 
+.manifesto-content h2, p {
+    margin-top: -5px;
+}
+
 .secondary-h2 {
     padding-top: 50px;
 }
@@ -308,8 +331,17 @@ header nav ul {
 @media screen and (max-width: 600px) {
     .manifesto {
         flex-direction: column;
+        padding: 0;
+    }
+    .co-living-image {
+        width: 100%;
+        height: auto;
+        margin-top: -50px;
+        margin-bottom: 20x;
     }
 }
+
+/* Locations / Cities Styling */
 
 .locations {
     display: flex;
@@ -331,11 +363,12 @@ header nav ul {
 .city-locations {
     display: flex;
     justify-content: center;
-    max-width: 100%; /* set a maximum width for the container */
+    align-items: center; /**/
+    max-width: 100%; 
     border-radius: 30px;
     gap: 20px;
     position: relative;
-    padding-top: 20px; /* space between Where Is Enso? and images */
+    padding-top: 20px; 
     margin-bottom: 30px;
 }
 
@@ -344,14 +377,14 @@ header nav ul {
 }
 
 .city-locations h2 {
-    margin-top: -80px;
-    text-align: center;
+    text-align: center; 
     background-color: rgba(255, 255, 255, 0.8);
+    margin-top: -90px;
     border-radius: 30px;
-    z-index: 1;
     position: absolute; /* to overlap images */
-    text-decoration: none;
-    font-size: 1.75rem;
+    font-size: 2rem;
+    padding: 5px 10px;
+    position: relative;
 }
 
 .city-locations h2 a:hover {
@@ -362,12 +395,11 @@ header nav ul {
     max-width: 100%;
     height: auto;
     border-radius: 30px;
-    position: relative;
     z-index: 0;
-    margin-bottom: 50px; /* slightly overlaps images */
+    margin-bottom: 10px; /*50px; /* slightly overlaps images */
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .city-locations {
         flex-direction: row; /* Display city containers side by side */
         flex-wrap: wrap; /* Allow containers to wrap onto a new line */
@@ -388,23 +420,33 @@ header nav ul {
     .city-locations .madrid-container,
     .city-locations .valencia-container,
     .city-locations .malaga-container {
-        width: 100%; /* For screens narrower than 300px, display one city container per line */
+        width: 100%; /* displays one city container per line */
+        margin: 20px 0;
     }
-
     .city-locations h2 {
         margin-top: -120px;
     }
+    .locations {
+        text-align: center;
+    }
+    .city-locations .malaga-container {
+        margin-bottom: 30px;
+    }
 }
+
 
 /* Founders styling */
 
 .founders {
     display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    max-width: 100%;
     height: auto; /* Maintain aspect ratio */
     text-align: center;
     gap: 15px;
+    margin: 0;
+    padding: 10px;
     }
 
 .founders h2 {
@@ -434,6 +476,13 @@ header nav ul {
         order: -1; /* Change the order to move .who to the top */
         background-color:rgb(249, 213, 48);
         border-radius: 100%;
+        margin-bottom: 30px;
+    }
+    .who p {
+        margin-top: -15px;
+    }
+    .micha, .josemi {
+        margin-bottom: 30px;
     }
 }
 
@@ -477,13 +526,11 @@ header nav ul {
     }
     .footer-contact {
         text-align: center;
+     
     }
 }
 
-@media screen and (max-width: 380px) {
-    .footer-links,
-    .footer-logo {
-        display: none;
-    }
+.footer-copyright {
+    padding-top: 10px;
 }
 
