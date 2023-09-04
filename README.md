@@ -1,5 +1,4 @@
-# CODECADEMY-Challenge-Project-Company-Home-Page-with-Flexbox
-Challenge Project: Company Home Page with Flexbox
+Codecademy Challenge Project: Company Home Page with Flexbox
 
 Overview:
 This project involved a series of open-ended requirements to complete a flexbox layout for a company's homepage (real or imagined).
